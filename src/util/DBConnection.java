@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/quanlydiem?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASSWORD = "123528";
+    private static final String PASSWORD = "Your_password";
 
     public static Connection getConnection() {
         try {
@@ -18,4 +18,5 @@ public class DBConnection {
         }
     }
 }
+
 
