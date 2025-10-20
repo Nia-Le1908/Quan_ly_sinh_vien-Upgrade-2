@@ -1,0 +1,141 @@
+/* File CSS này định nghĩa phong cách chung cho toàn bộ ứng dụng.
+    Đã bổ sung các style cho các thành phần giao diện chung (bảng, nút, ô nhập liệu)
+    để toàn bộ ứng dụng có giao diện đồng bộ và hiện đại.
+*/
+
+.root {
+    -fx-background-color: #f4f7fc;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* === Giao diện Dashboard === */
+
+.title-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.subtitle-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.dashboard-button {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #fdfdfd);
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 180px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 15, 0, 0, 4);
+    -fx-cursor: hand;
+    -fx-padding: 20;
+}
+
+.dashboard-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 6);
+    -fx-translate-y: -2;
+}
+
+.icon {
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}
+
+.button-sv .icon { -fx-fill: #3498db; }
+.button-sv:hover { -fx-border-color: #3498db; }
+.button-mh .icon { -fx-fill: #9b59b6; }
+.button-mh:hover { -fx-border-color: #9b59b6; }
+.button-diem .icon { -fx-fill: #2ecc71; }
+.button-diem:hover { -fx-border-color: #2ecc71; }
+
+
+/* === Giao diện các cửa sổ con === */
+
+.main-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 15;
+}
+
+/* Định dạng cho TextField, ComboBox, DatePicker */
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+}
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2px;
+}
+
+/* Định dạng cho Button chung */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Nút xóa có màu khác biệt */
+.button-delete {
+    -fx-background-color: #e74c3c;
+}
+.button-delete:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* Nút tìm kiếm */
+.button-search {
+    -fx-background-color: #1abc9c;
+}
+.button-search:hover {
+    -fx-background-color: #16a085;
+}
+
+
+/* Định dạng cho TableView */
+.table-view {
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.table-view .column-header-background {
+    -fx-background-color: #ecf0f1;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+}
+.table-view .table-row-cell:odd {
+    -fx-background-color: #fdfdfd;
+}
+.table-view .table-row-cell:even {
+    -fx-background-color: #f7f7f7;
+}
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}

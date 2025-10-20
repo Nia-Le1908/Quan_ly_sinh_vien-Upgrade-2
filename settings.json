@@ -1,0 +1,8 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "C:\\Users\\ADMIN\\Downloads\\mysql-connector-j-9.4.0\\mysql-connector-j-9.4.0.jar",
+    "c:\\Users\\ADMIN\\Downloads\\jbcrypt-0.4.jar"
+  ],
+  "javafx.sceneBuilder.home": "C:\\Users\\ADMIN\\AppData\\Local\\SceneBuilder\\SceneBuilder.exe"
+}

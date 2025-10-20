@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <top>
+      <Label styleClass="main-title" text="CHƯƠNG TRÌNH QUẢN LÝ ĐIỂM" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="subtitle-text" text="Vui lòng chọn chức năng bạn muốn thực hiện" />
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#moQuanLySinhVien" styleClass="dashboard-button" text="QUẢN LÝ SINH VIÊN" />
+                  <Button mnemonicParsing="false" onAction="#moQuanLyMonHoc" styleClass="dashboard-button" text="QUẢN LÝ MÔN HỌC" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#moBangDiem" styleClass="dashboard-button" text="NHẬP/SỬA ĐIỂM" />
+                  <Button mnemonicParsing="false" onAction="#moThongKe" styleClass="dashboard-button" text="XEM BÁO CÁO ĐIỂM" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#thoatChuongTrinh" styleClass="exit-button" text="Thoát chương trình" />
+         </children>
+      </VBox>
+   </center>
+   <padding>
+      <Insets bottom="20.0" />
+   </padding>
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="550.0" prefWidth="400.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <center>
+      <VBox alignment="CENTER" maxWidth="300.0" spacing="15.0">
+         <children>
+            <Label styleClass="title-label" text="ĐĂNG KÝ TÀI KHOẢN" />
+            <Label fx:id="lblStatus" style="-fx-text-fill: red;" text="" />
+            <TextField fx:id="tfUsername" promptText="Tên đăng nhập" />
+            <PasswordField fx:id="pfPassword" promptText="Mật khẩu" />
+            <PasswordField fx:id="pfConfirmPassword" promptText="Xác nhận mật khẩu" />
+            <ComboBox fx:id="cbRole" prefWidth="300.0" promptText="Chọn vai trò" />
+            <TextField fx:id="tfMaSV" managed="false" promptText="Mã số sinh viên" visible="false" />
+            <Button mnemonicParsing="false" onAction="#handleRegister" prefWidth="300.0" styleClass="add-button" text="Đăng ký" />
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Đã có tài khoản? " />
+                  <Hyperlink onAction="#switchToLogin" text="Đăng nhập" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</BorderPane>

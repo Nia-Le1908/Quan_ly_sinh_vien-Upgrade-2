@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open in Scene Builder",
+      "type": "shell",
+      "command": "Start-Process",
+      "args": [
+        "\"C:\\Users\\ADMIN\\AppData\\Local\\SceneBuilder\\SceneBuilder.exe\\SceneBuilder.exe\"",
+        "\"${file}\""
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "group": "none"
+    }
+  ]
+}

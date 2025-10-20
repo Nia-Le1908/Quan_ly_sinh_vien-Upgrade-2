@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DiemController">
+    <top>
+        <Label styleClass="title-label" text="NHẬP/SỬA ĐIỂM THEO LỚP" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <VBox spacing="10" styleClass="form-container">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <children>
+                        <Label text="Lớp:" />
+                        <ComboBox fx:id="cbLop" promptText="Chọn lớp" />
+                        <Label text="Môn học:" />
+                        <ComboBox fx:id="cbMonHoc" prefWidth="250.0" promptText="Chọn môn học" />
+                        <Button fx:id="btnXemDiem" onAction="#locDiem" styleClass="button-primary" text="Xem điểm" />
+                    </children>
+                </HBox>
+                <TableView fx:id="tableDiem" prefHeight="400.0">
+                    <columns>
+                        <TableColumn fx:id="colMaSV" prefWidth="100.0" text="Mã SV" />
+                        <TableColumn fx:id="colHoTen" prefWidth="180.0" text="Họ Tên" />
+                        <TableColumn fx:id="colDiemQT" prefWidth="100.0" text="Điểm Quá Trình" />
+                        <TableColumn fx:id="colDiemThi" prefWidth="100.0" text="Điểm Thi" />
+                        <TableColumn fx:id="colDiemTB" prefWidth="120.0" text="Điểm Trung Bình" />
+                    </columns>
+                </TableView>
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" />
+                    </padding>
+                    <children>
+                        <Label text="Mã SV:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="tfMaSV" editable="false" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <Label text="Họ Tên:" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+                        <TextField fx:id="tfHoTen" editable="false" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+
+                        <Label text="Điểm QT:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="tfDiemQT" promptText="Nhập điểm QT" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <Label text="Điểm Thi:" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                        <TextField fx:id="tfDiemThi" promptText="Nhập điểm thi" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+                    </children>
+                </GridPane>
+                <HBox spacing="10">
+                    <Button fx:id="btnCapNhat" onAction="#capNhatDiem" styleClass="button-primary" text="Cập Nhật Điểm" />
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <!-- Bổ sung Label còn thiếu -->
+        <HBox alignment="CENTER_LEFT" style="-fx-padding: 5 10 10 10;">
+            <children>
+                <Label fx:id="lblStatus" text="Vui lòng chọn lớp và môn học để xem điểm." />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
+
